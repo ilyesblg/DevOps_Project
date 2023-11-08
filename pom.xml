@@ -113,7 +113,17 @@
             </plugins>
         </pluginManagement>
         <plugins>
+         <plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>sonar-maven-plugin</artifactId>
+    <version>3.2</version>
+   </plugin>
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-deploy-plugin</artifactId>
+   </plugin>
             <plugin>
+
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <executions>
@@ -131,6 +141,7 @@
                     </execution>
                 </executions>
             </plugin>
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -149,12 +160,18 @@
                 <version>3.0.0-M3</version>
 
             </plugin>
+            <plugin>
+     <groupId>org.apache.maven.plugins</groupId>
+     <artifactId>maven-deploy-plugin</artifactId>
+     <version>2.8.2</version>
+                    </plugin>
         </plugins>
     </build>
+
 <distributionManagement>
 <repository>
 <id>maven-releases</id>
-<url>http://192.168.33.10:8081/repository/maven-releases/</url>
+<url>http://localhost:8081/repository/maven-releases/</url>
 </repository>
 </distributionManagement>
 </project>
